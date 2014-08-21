@@ -1,10 +1,10 @@
 <html>
 <head>
 <title>
-一篇文章弄懂github创建网页和自己的站点
+AJAXHELPER的GET和POST请求的封装类
 </title>
-<meta name="keywords" content="github,github pages,github page,github创建网页,github创建站点">
-<meta name="description" content="github,github pages创建网页和自己的站点,一篇文章弄懂github创建网页和自己的站点">
+<meta name="keywords" content="AJAXHELPER,GET,POST,请求,封装类">
+<meta name="description" content="AJAXHELPER的GET和POST请求的封装类">
 <link href="bootstrap-combined.min.css" rel="stylesheet">
 <style type='text/css'>
     body {
@@ -58,8 +58,58 @@
 </script>
 <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
  <div class='span9 main'>
-        <h2>文章列表</h2>
+        <h2>AJAXHELPER的GET和POST请求的封装类</h2>
+var ajaxHelper = {
+    //1.得到异步对象
+    GetXhr: function () {
+        var xhr;
+        if (window.XMLHttpRequest) {
+           //兼容新式浏览器
+            xhr = new XMLHttpRequest();
+        } else { //兼容IE老式浏览器
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //返回异步对象
+        return xhr;
+    },
+    //2.定义get请求
+    ajaxGet: function (url, callback) {
+        this.ajaxComm("get", url, null, callback);
+    },
+    //3.定义post请求
+    ajaxPost: function (url,params,callback) {
+        this.ajaxComm("post",url,params,callback);
+    },
+    //4.公共请求方法
+   //method：get,post
+   //url:需要发送的请求地址
+   //parms:发送给服务器的数据，post的时候才有值，get为null
+   //callbakc:请求成功以后的回调函数
+    ajaxComm: function (method, url, params, callbakc) {
+        //1.0创建异步对象
+        var xhr = this.GetXhr();
+        //2.0设置请求的参数
+        xhr.open(method, url, params, callbakc);
+        //3.0防止缓存
+        if (method == "get") {
+            xhr.setRequestHeader("If-Modified-Since", "0");
+        } else {
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        }
+        //4.0设置回调函数
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState==4&&xhr.status==200){
+                var objdata = xhr.responseText;
+                var data = JSON.parse(objdata);
+                //执行业务逻辑
+                callbakc(data);
+            }
+        }
+        //5.0发送请求
+        xhr.send(params);
 
+    }
+}
 
 
 
