@@ -6,6 +6,9 @@
 <meta name="keywords" content="最新,最全,2005-2014信息系统项目管理师历年真题,含上午题,案例分析,论文,试题和答案,下载">
 <meta name="description" content="最新最全2005-2014信息系统项目管理师历年真题（含上午题、案例分析、论文）试题和答案下载">
 <link href="bootstrap-combined.min.css" rel="stylesheet">
+   <link type="text/css" href="css/lanrenzhijia.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/lanrenzhijia.js"></script>
 <style type='text/css'>
     body {
       background-color: #CCC;
@@ -28,15 +31,84 @@
 <body>
 <div class='container'>
     <h1>优知网</h1>
-    <div class='navbar navbar-inverse'>
-      <div class='navbar-inner nav-collapse' style="height: auto;">
-        <ul class="nav">
-          <li class="active"><a href="http://www.s8e.net/index.html">主页</a></li>
-           <li class="active"><a href="http://www.s8e.net/download.html">资源下载</a></li>
-          <li><a href="http://www.s8e.net/about.html">关于我</a></li>
-        </ul>
-      </div>
-    </div>
+   <div id="menu">
+    <ul class="menu">
+      <li><a href="http://www.s8e.net"><span>首页</span></a>
+        </li>
+        <li><a href="http://www.s8e.net/news.html" class="parent"><span>新闻资讯</span></a>
+            <div><ul>
+                <li><a href="http://www.s8e.net/internet.html" class="parent"><span>互联网</span></a>
+                    <div><ul>
+                        <li><a href="#"><span>Sub Item 1.1</span></a></li>
+                        <li><a href="#"><span>Sub Item 1.2</span></a></li>
+                    </ul></div>
+                </li>
+                <li><a href="http://www.s8e.net/weixin.html" class="parent"><span>微信</span></a>
+                    <div><ul>
+                        <li><a href="#"><span>Sub Item 2.1</span></a></li>
+                        <li><a href="#"><span>Sub Item 2.2</span></a></li>
+                    </ul></div>
+                </li>
+                <li><a href="#"><span>Sub Item 3</span></a></li>
+                <li><a href="#"><span>Sub Item 4</span></a></li>
+                <li><a href="#"><span>Sub Item 5</span></a></li>
+                <li><a href="#"><span>Sub Item 6</span></a></li>
+                <li><a href="#"><span>Sub Item 7</span></a></li>
+            </ul></div>
+        </li>
+		 <li><a href="http://www.s8e.net/mobile.html" class="parent"><span>移动开发</span></a>
+            <div><ul>
+                <li><a href="http://www.s8e.net/android.html" class="parent"><span>Android</span></a>
+                    <div><ul>
+                        <li><a href="#"><span>Sub Item 1.1</span></a></li>
+                        <li><a href="#"><span>Sub Item 1.2</span></a></li>
+                    </ul></div>
+                </li>
+                <li><a href="#" class="parent"><span>开放平台</span></a>
+                    <div><ul>
+                        <li><a href="#"><span>Sub Item 2.1</span></a></li>
+                        <li><a href="#"><span>Sub Item 2.2</span></a></li>
+                    </ul></div>
+                </li>
+                <li><a href="#"><span>微信</span></a></li>
+                <li><a href="#"><span>游戏</span></a></li>
+                <li><a href="#"><span>Sub Item 5</span></a></li>
+                <li><a href="#"><span>Sub Item 6</span></a></li>
+                <li><a href="#"><span>Sub Item 7</span></a></li>
+            </ul></div>
+        </li>
+		<li><a href="#"><span>互联网</span></a></li>
+		 <li><a href="#"><span>微营销</span></a></li>
+		   <li><a href="#" class="parent"><span>.Net</span></a>
+            <div><ul>
+                <li><a href="#" class="parent"><span>.NetFramework</span></a>
+                    <div><ul>
+                        <li><a href="#"><span>C#</span></a></li>
+                        <li><a href="#"><span>Sub Item 1.2</span></a></li>
+                    </ul></div>
+                </li>
+                <li><a href="#" class="parent"><span>Asp.Net</span></a>
+                    <div><ul>
+                        <li><a href="#"><span>Sub Item 2.1</span></a></li>
+                        <li><a href="#"><span>Sub Item 2.2</span></a></li>
+                    </ul></div>
+                </li>
+                <li><a href="#"><span>Mvc</span></a></li>
+            </ul></div>
+        </li>
+		 <li><a href="#"><span>Java</span></a></li>
+		 <li><a href="#"><span>Web</span></a></li>
+        <li><a href="#"><span>数据库</span></a></li>
+		<li><a href="http://www.s8e.net/download.html" class="parent" target=""><span>资源下载</span></a>
+            <div><ul>
+                <li><a href="#"><span>应用软件</span></a></li>
+                <li><a href="#"><span>电子书籍</span></a></li>
+                <li><a href="#"><span>视频教程</span></a></li>
+            </ul></div>
+        </li>
+        <li class="last"><a href="http://www.s8e.net/about.html"><span>联系我们</span></a></li>
+    </ul>
+</div>
     <div id='content' class='row-fluid'>
 <script type="text/javascript">
     /*960*60 创建于 2014-08-06*/
