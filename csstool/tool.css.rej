@@ -1,0 +1,9 @@
+diff a/csstool/tool.css b/csstool/tool.css	(rejected hunks)
+@@ -0,6 +0,7 @@
+ h2{font:22px "微软雅黑";color:#333}
+ h3{font-size:12px;font-weight:lighter;color:#666}
+ 
++/* 文本域 */
+ .tooltext{padding:4px;margin-right:12px;font-size:18px;height:21px;line-height:21px;color:#333;float:left;}
+ .toolarea{padding:4px;margin:8px 0;width:720px;height:250px;color:#333;display:block}
+ 
